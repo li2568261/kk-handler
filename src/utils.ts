@@ -1,0 +1,1 @@
+export const checkType = (value: any, type: string)=>Object.prototype.toString.call(value) === `[object ${type}]`
