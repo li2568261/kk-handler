@@ -11,12 +11,10 @@ export const createPromisePool = (limit:number)=>{
         } catch(e){
             console.log(e);
         }
+        penddingCount--;
         if(waitingQueue.length){
             checkTypeAndComplateOpreate(waitingQueue.shift())
-        } else {
-            penddingCount--;
-        };
-
+        }
     }
 
     const promisePool = (fun: any)=>{
